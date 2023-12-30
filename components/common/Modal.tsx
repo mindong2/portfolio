@@ -124,7 +124,7 @@ const Modal = ({ idx, setIsModal }: { idx: number; setIsModal: React.Dispatch<Re
                 <h3>
                   👩‍💻 업무 [{modalData.date}]
                   {modalData.work.map((v, idx) => (
-                    <p key={idx}>{v}</p>
+                    <p key={idx}>- {v}</p>
                   ))}
                 </h3>
                 <h3>
