@@ -1,18 +1,22 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import Profile from "./Profile";
 import Project from "./Project";
-import Skill from "./Skill";
+import Skills from "./Skills";
 import Contact from "./Contact";
 import styled from "styled-components";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Wrapper = styled.main``;
 
 const MainPage = () => {
+  useEffect(() => {
+    AOS.init();
+  });
   return (
     <Wrapper>
       <Profile />
-      <Skill />
+      <Skills />
       <Project />
       <Contact />
     </Wrapper>

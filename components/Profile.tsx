@@ -3,10 +3,9 @@ import React from "react";
 import styled from "styled-components";
 
 export const ContentBox = styled.section`
-  min-height: 100vh;
   margin: 0 auto;
   padding: 8rem 3rem;
-
+  border-top: 0.3rem dashed #c8c8c8;
   &#profile {
     padding-top: 24rem;
   }
@@ -55,7 +54,7 @@ const About = styled.section`
   margin-top: 10rem;
 `;
 
-const SectionTitle = styled.div`
+export const SectionTitle = styled.div`
   font-size: 3.6rem;
   span {
     font-size: 4rem;
@@ -89,7 +88,7 @@ const AboutListItem = styled(motion.li)`
 
 const Profile = () => {
   return (
-    <ContentBox id="profile">
+    <ContentBox id="profile" data-aos="fade-up">
       <ContentBoxWrap>
         <Info>
           <ProfileImg whileHover={{ y: -10 }}>
