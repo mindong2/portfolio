@@ -53,7 +53,7 @@ const Skills = () => {
     <ContentBox id="skills">
       <ContentBoxWrap>
         <Skill>
-          <SectionTitle>
+          <SectionTitle data-aos="fade">
             <span>S</span>kills
           </SectionTitle>
           <SkillDivide>

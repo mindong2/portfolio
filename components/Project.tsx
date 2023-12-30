@@ -1,6 +1,7 @@
 import React from "react";
 import { ContentBox, ContentBoxWrap, SectionTitle } from "./Profile";
 import styled from "styled-components";
+import ProjectList from "./ProjectList";
 
 const Projects = styled.div`
   display: flex;
@@ -14,9 +15,10 @@ const Project = () => {
     <ContentBox id="project">
       <ContentBoxWrap>
         <Projects>
-          <SectionTitle>
+          <SectionTitle data-aos="fade">
             <span>P</span>rojects
           </SectionTitle>
+          <ProjectList />
         </Projects>
       </ContentBoxWrap>
     </ContentBox>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 
 export const ContentBox = styled.section`
@@ -24,6 +24,7 @@ const Info = styled.div`
 `;
 
 const ProfileImg = styled(motion.div)`
+  cursor: pointer;
   img {
     width: 20rem;
     border: 0.1rem solid #c8c8c8;
@@ -87,16 +88,19 @@ const AboutListItem = styled(motion.li)`
 `;
 
 const Profile = () => {
+  const constraintsRef = useRef(null);
   return (
     <ContentBox id="profile" data-aos="fade-up">
       <ContentBoxWrap>
         <Info>
-          <ProfileImg whileHover={{ y: -10 }}>
-            <img src="/image/face.jpg" alt="프로필 사진" />
+          <ProfileImg whileHover={{ y: -10 }} ref={constraintsRef}>
+            <motion.div drag dragConstraints={constraintsRef}>
+              <img src="/image/face.jpg" alt="프로필 사진" />
+            </motion.div>
           </ProfileImg>
           <Description>
             {/* 성공적인 프로덕트를 위해, 본인의 성장을 위해, 함께 하는 동료를 위해 */}
-            성공적인 프로덕트를 위해, 본인의 성장을 위해
+            성공적인 프로덕트와 본인의 성장을 위해
             <br />
             끊임없이 탐구하는 주니어 프론트엔드 개발자 <span>김동민</span> 입니다.
           </Description>
