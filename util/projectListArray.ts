@@ -14,6 +14,23 @@ interface IProjectListArray {
 export const projectListArray: IProjectListArray[] = [
   {
     id: 1,
+    title: "포트폴리오 사이트",
+    link: "https://dongmin-kim.vercel.app/",
+    img: "/image/project/portfolio.png",
+    date: "2023.12",
+    work: [
+      "Next.js와 Typescript를 이용한 페이지 구현",
+      "Aos, Framer-motion을 이용한 인터렉션 애니메이션 구현",
+      "페이지 설계 및 Styled Components를 이용한 스타일링",
+      "Emailjs를 이용해 이메일 발송기능 구현",
+    ],
+    github: "https://github.com/mindong2/portfolio",
+    desc: "제 소개를 하기위한 포트폴리오 사이트입니다.",
+    mean: "SEO에 이점을 갖고있기 때문에 Next.js로 작업을 해볼 수 있었습니다. 간단한 페이지지만 Next.js와 조금 더 가까워 질 수 있었습니다. 인터렉션 애니메이션 구현을 위해 Aos와 Framer-motion을 사용했는데, 간단하게 작업 할 수 있는 좋은 라이브러리를 사용 해 볼 수 있었습니다.",
+    skill: "Next.js, Typescript",
+  },
+  {
+    id: 2,
     title: '나만의 SNS - "MINI"',
     link: "https://mini-mindong2.web.app/",
     img: "/image/project/mini.png",
@@ -29,7 +46,7 @@ export const projectListArray: IProjectListArray[] = [
     skill: "React, Typescript, Firebase",
   },
   {
-    id: 2,
+    id: 3,
     title: "예비집사 판별기",
     link: "https://cats-mbti-owo.netlify.app/",
     img: "/image/project/cats.png",
@@ -45,7 +62,7 @@ export const projectListArray: IProjectListArray[] = [
     skill: "React, Typescript",
   },
   {
-    id: 3,
+    id: 4,
     title: "Myflix",
     link: "https://myflix-mindong.netlify.app/",
     img: "/image/project/myflix.png",
@@ -61,7 +78,7 @@ export const projectListArray: IProjectListArray[] = [
     skill: "React, Typescript, React-Query",
   },
   {
-    id: 4,
+    id: 5,
     title: '신규플랫폼 "고고모바일"',
     link: "https://gogomobile.co.kr/",
     img: "/image/project/gogomobile.png",
@@ -77,7 +94,7 @@ export const projectListArray: IProjectListArray[] = [
     skill: "HTML5, CSS3, Jquery, Codeigniter",
   },
   {
-    id: 5,
+    id: 6,
     title: "Unity Square",
     link: "http://www.unitysquare.co.kr/",
     img: "/image/project/unitysquare.png",
