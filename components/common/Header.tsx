@@ -1,65 +1,22 @@
 "use client";
 
 import Link from "next/link";
-import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
+import { Hamburger, HeaderWrap, Logo, Menu, MenuList, Wrapper } from "@/styles/common";
+import { useState } from "react";
 
-const HeaderWrap = styled.header`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 8rem;
-  padding: 3rem 0;
-  background-color: #fff;
-  border-bottom: 0.1rem solid #c8c8c8;
-  font-size: 2rem;
-  z-index: 999;
-`;
-
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 144rem;
-  margin: 0 auto;
-`;
-
-const Logo = styled.h1`
-  font-weight: 600;
-`;
-
-const Menu = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 0 3rem;
-`;
-
-const MenuList = styled.li`
-  a {
-    position: relative;
-    transition: all 0.2s ease-in-out;
-  }
-  a::after {
-    content: "";
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-    width: 100%;
-    height: 0.1rem;
-    background-color: #ff5d6a;
-    transform: scaleX(0);
-    transform-origin: 0;
-    transition: all 0.25s ease-in-out;
-  }
-
-  &:hover a {
-    color: #ff5d6a;
-  }
-  &:hover a::after {
-    transform: scaleX(1);
-  }
-`;
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const menuOpen = () => {
+    setIsOpen(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  const menuClose = () => {
+    setIsOpen(false);
+    document.body.style.overflow = "visible";
+  };
   return (
     <>
       <HeaderWrap>
@@ -67,18 +24,36 @@ const Header = () => {
           <Logo>
             <Link href="#">KDM's Portfolio</Link>
           </Logo>
-          <Menu>
-            <MenuList>
+          <Hamburger onClick={menuOpen}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </Hamburger>
+          <Menu className={isOpen ? "on" : ""}>
+            <MenuList onClick={menuClose}>
               <a href="#profile">Profile</a>
             </MenuList>
-            <MenuList>
+            <MenuList onClick={menuClose}>
               <a href="#skills">Skills</a>
             </MenuList>
-            <MenuList>
+            <MenuList onClick={menuClose}>
               <a href="#project">Project</a>
             </MenuList>
-            <MenuList>
+            <MenuList onClick={menuClose}>
               <a href="#contact">Contact</a>
+            </MenuList>
+            <MenuList className="close">
+              <svg
+                onClick={menuClose}
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
             </MenuList>
           </Menu>
         </Wrapper>

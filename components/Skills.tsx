@@ -1,52 +1,5 @@
 import React from "react";
-import { ContentBox, ContentBoxWrap, SectionTitle } from "./Profile";
-import styled from "styled-components";
-import { motion } from "framer-motion";
-
-const Skill = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem 0;
-`;
-
-const SkillDivide = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-`;
-
-const SkillList = styled(motion.div)`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  width: 100%;
-  flex: 1;
-  flex-wrap: wrap;
-  padding: 3rem;
-  border: 1px solid #c8c8c8;
-  border-radius: 1rem;
-  box-shadow: 0 0 4px 0px #c8c8c8;
-  .title {
-    position: absolute;
-    top: -1.2rem;
-    left: 2.4rem;
-    padding: 0 1rem;
-    font-size: 1.8rem;
-    background-color: #fff;
-  }
-`;
-
-const SkillListItem = styled(motion.div)`
-  display: flex;
-  align-items: center;
-  gap: 0 1rem;
-  font-size: 2.4rem;
-  .icon {
-    width: 4rem;
-  }
-`;
+import { ContentBox, ContentBoxWrap, SectionTitle, Skill, SkillDivide, SkillList, SkillListItem } from "@/styles/componentsStyle";
 
 const Skills = () => {
   return (

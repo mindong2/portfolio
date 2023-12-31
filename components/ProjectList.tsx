@@ -3,32 +3,9 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "./common/Modal";
 import { projectListArray } from "@/util/projectListArray";
+import { List, ListItem } from "@/styles/componentsStyle";
 
 const Wrapper = styled.div``;
-const List = styled.ul`
-  display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
-  width: 100%;
-`;
-const ListItem = styled(motion.li)`
-  width: 31%;
-  padding: 1rem;
-  border: 1px solid #c8c8c8;
-  border-radius: 1rem;
-  box-shadow: 0 0 0.6rem 0 #c8c8c8;
-  background-color: #fff;
-  cursor: pointer;
-  img {
-    width: 100%;
-    height: 13rem;
-  }
-  h3 {
-    margin-top: 1.6rem;
-    text-align: center;
-    font-size: 2rem;
-  }
-`;
 
 const ProjectList = () => {
   const [isModal, setIsModal] = useState(false);

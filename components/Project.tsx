@@ -1,7 +1,7 @@
 import React from "react";
-import { ContentBox, ContentBoxWrap, SectionTitle } from "./Profile";
 import styled from "styled-components";
 import ProjectList from "./ProjectList";
+import { ContentBox, ContentBoxWrap, SectionTitle } from "@/styles/componentsStyle";
 
 const Projects = styled.div`
   display: flex;

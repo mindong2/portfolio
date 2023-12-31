@@ -1,64 +1,6 @@
 import React, { useRef, useState } from "react";
-import { ContentBox, ContentBoxWrap, SectionTitle } from "./Profile";
-import styled from "styled-components";
 import emailjs from "@emailjs/browser";
-const ContactBox = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5rem 0;
-`;
-
-const Cont = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 35.6rem;
-`;
-const ContactImg = styled.img`
-  width: 48.5%;
-  border-radius: 0.4rem;
-`;
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1rem 0;
-  width: 48.5%;
-  height: 100%;
-  input,
-  textarea {
-    padding: 1rem;
-    border: 0.1rem solid #c8c8c8;
-    border-radius: 0.4rem;
-    outline: none;
-    transition: all 0.2s ease-in-out;
-    font-size: 1.6rem;
-    resize: none;
-
-    &:focus {
-      border: 0.1rem solid #ff5d6a;
-      box-shadow: 0 0 0 1px #ff5d6a inset;
-    }
-  }
-
-  button {
-    padding: 1rem;
-    font-size: 1.8rem;
-    background-color: #ff5d6a;
-    color: #fff;
-    border: none;
-    border-radius: 0.4rem;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      background-color: #ff2637;
-    }
-  }
-`;
+import { Cont, ContactBox, ContactImg, ContentBox, ContentBoxWrap, Form, SectionTitle } from "@/styles/componentsStyle";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -66,6 +8,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const formData = useRef<HTMLFormElement | null>(null);
+
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (window.confirm("정말로 메일을 보내시겠어요?")) {
@@ -91,7 +34,7 @@ const Contact = () => {
   };
 
   return (
-    <ContentBox id="skills">
+    <ContentBox id="contact">
       <ContentBoxWrap>
         <ContactBox>
           <SectionTitle data-aos="fade">

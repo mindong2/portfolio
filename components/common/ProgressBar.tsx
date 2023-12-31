@@ -10,7 +10,7 @@ const Progress = styled(motion.div)`
   height: 0.2rem;
   background: #ff5d6a;
   transform-origin: 0%;
-  z-index: 999;
+  z-index: 9;
 `;
 
 const ProgressBar = () => {

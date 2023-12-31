@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import styled from "styled-components";
 import { projectListArray } from "@/util/projectListArray";
+import { ModalBox, ModalContent, Overlay } from "@/styles/common";
 
 const Wrapper = styled(motion.div)`
   position: fixed;
@@ -14,6 +15,10 @@ const Wrapper = styled(motion.div)`
   transform: translate(-50%, -50%) !important;
   z-index: 1001;
 
+  @media screen and (max-width: 578px) {
+    width: 90%;
+  }
+
   svg {
     position: absolute;
     top: 0.4rem;
@@ -23,55 +28,6 @@ const Wrapper = styled(motion.div)`
   }
 `;
 
-const ModalBox = styled(motion.div)`
-  max-height: 80vh;
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    display: none;
-  }
-  img {
-    width: 100%;
-  }
-`;
-
-const ModalContent = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem 0;
-  margin-top: 4rem;
-  h2 {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    padding-bottom: 0.4rem;
-    background-color: #ff5d6a;
-    color: #fff;
-    border-radius: 0.4rem;
-    font-size: 2.8rem;
-    text-align: center;
-  }
-
-  h3 {
-    font-size: 2rem;
-    .github {
-      width: 2rem;
-    }
-    p {
-      margin-top: 1rem;
-      font-size: 1.6rem;
-      line-height: 1.87;
-    }
-  }
-`;
-
-const Overlay = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 1000;
-`;
 const Modal = ({ idx, setIsModal }: { idx: number; setIsModal: React.Dispatch<React.SetStateAction<boolean>> }) => {
   const modalData = projectListArray.filter((item) => item.id === idx)[0];
   return (

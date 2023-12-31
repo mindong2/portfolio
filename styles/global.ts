@@ -8,13 +8,32 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         scroll-behavior: smooth;
     }
-    
+
+    *::-webkit-scrollbar {
+        width: 1.4rem;
+    }
+
+    *::-webkit-scrollbar-track {
+        background: #fff;
+    }
+
+    *::-webkit-scrollbar-thumb {
+        background-color: #d6d6d6;
+        border-radius: 1.3rem;
+        border: 0.1rem none #ffffff;
+    }
+
     html,body {
         font-size:62.5%; //10px
         font-family: "Jalnan2";
         line-height: 1.3;
         color: #333;
+
+        @media screen and (max-width: 768px) {
+            font-size:55%; //10px
+        }
     }
+
     @font-face {
         font-family: "Jalnan2";
         src: url("/fonts/Jalnan2.ttf");
@@ -29,4 +48,5 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-user-drag: none;
         user-drag: none;
     }
+
 `;

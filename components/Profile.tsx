@@ -1,91 +1,17 @@
+import {
+  About,
+  AboutList,
+  AboutListItem,
+  AboutWrap,
+  ContentBox,
+  ContentBoxWrap,
+  Description,
+  Info,
+  ProfileImg,
+  SectionTitle,
+} from "@/styles/componentsStyle";
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
-import styled from "styled-components";
-
-export const ContentBox = styled.section`
-  margin: 0 auto;
-  padding: 8rem 3rem;
-  border-top: 0.3rem dashed #c8c8c8;
-  &#profile {
-    padding-top: 24rem;
-  }
-`;
-
-export const ContentBoxWrap = styled.section`
-  max-width: 98rem;
-  margin: 0 auto;
-`;
-
-const Info = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 5rem;
-`;
-
-const ProfileImg = styled(motion.div)`
-  cursor: pointer;
-  img {
-    width: 20rem;
-    border: 0.1rem solid #c8c8c8;
-    border-radius: 0.6rem;
-  }
-`;
-
-const Description = styled.div`
-  font-family: "Jalnan2";
-  font-size: 3.2rem;
-  line-height: 1.5;
-  word-break: keep-all;
-  span {
-    padding: 0.5rem;
-    padding-bottom: 0;
-    background-color: #ff5d6a;
-    color: #fff;
-    border-radius: 0.4rem;
-  }
-`;
-
-const About = styled.section`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 3rem 0;
-  margin: 0 auto;
-  margin-top: 10rem;
-`;
-
-export const SectionTitle = styled.div`
-  font-size: 3.6rem;
-  span {
-    font-size: 4rem;
-    color: #ff5d6a;
-  }
-`;
-
-const AboutWrap = styled.div`
-  width: 100%;
-  text-align: center;
-`;
-
-const AboutList = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 4rem;
-`;
-
-const AboutListItem = styled(motion.li)`
-  display: flex;
-  align-items: center;
-  gap: 0 1rem;
-  width: 30%;
-  font-size: 1.8rem;
-  .icon {
-    width: 4rem;
-  }
-`;
+import { useRef } from "react";
 
 const Profile = () => {
   const constraintsRef = useRef(null);
