@@ -14,7 +14,7 @@ interface IProjectListArray {
 export const projectListArray: IProjectListArray[] = [
   {
     id: 1,
-    title: "포트폴리오 사이트",
+    title: "포트폴리오 사이트 ",
     link: "https://dongmin-kim.vercel.app/",
     img: "/image/project/portfolio.png",
     date: "2023.12",
