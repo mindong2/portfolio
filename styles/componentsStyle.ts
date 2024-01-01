@@ -171,27 +171,35 @@ export const List = styled.ul`
   width: 100%;
 `;
 export const ListItem = styled(motion.li)`
-  width: 31%;
+  width: 48%;
   padding: 1rem;
   border: 1px solid #c8c8c8;
   border-radius: 1rem;
   box-shadow: 0 0 0.6rem 0 #c8c8c8;
   background-color: #fff;
   cursor: pointer;
-  @media screen and (max-width: 768px) {
-    width: 47%;
-    height: auto;
-  }
-  @media screen and (max-width: 578px) {
-    width: 100%;
-  }
+
   img {
     width: 100%;
+    max-height: 20.8rem;
+    object-fit: cover;
   }
+
   h3 {
     margin-top: 1.6rem;
     text-align: center;
     font-size: 2rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 47%;
+    height: auto;
+    img {
+      height: auto;
+    }
+  }
+  @media screen and (max-width: 578px) {
+    width: 100%;
   }
 `;
 

@@ -146,6 +146,8 @@ export const ModalContent = styled(motion.div)`
       margin-top: 1rem;
       font-size: 1.6rem;
       line-height: 1.87;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 `;
