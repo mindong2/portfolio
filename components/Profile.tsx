@@ -25,10 +25,9 @@ const Profile = () => {
             </motion.div>
           </ProfileImg>
           <Description>
-            {/* 성공적인 프로덕트를 위해, 본인의 성장을 위해, 함께 하는 동료를 위해 */}
-            성공적인 프로덕트와 본인의 성장을 위해
+            성공적인 프로덕트와 성장을 위해&nbsp;
             <br />
-            끊임없이 탐구하는 주니어 프론트엔드 개발자 <span>김동민</span> 입니다.
+            꾸준하고 끈기있게 탐구하는 주니어 프론트엔드 개발자 <span>김동민</span> 입니다.
           </Description>
         </Info>
         <About>
@@ -122,7 +121,7 @@ const Profile = () => {
                   />
                 </svg>
 
-                <a href="email:qlsnaos12@naver.com">qlsnaos12@naver.com</a>
+                <a href="mailto:qlsnaos12@naver.com">qlsnaos12@naver.com</a>
               </AboutListItem>
               <AboutListItem whileHover={{ y: -3 }}>
                 <img src="/image/github-logo.svg" alt="깃허브 로고" className="icon" />

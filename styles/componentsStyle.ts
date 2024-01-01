@@ -62,6 +62,10 @@ export const Description = styled.div`
     color: #fff;
     border-radius: 0.4rem;
   }
+
+  @media screen and (max-width: 578px) {
+    font-size: 2.8rem;
+  }
 `;
 
 export const About = styled.section`
