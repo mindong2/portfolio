@@ -54,6 +54,10 @@ const Modal = ({ idx, setIsModal }: { idx: number; setIsModal: React.Dispatch<Re
               <ModalContent>
                 <h2>{modalData.title}</h2>
                 <h3>
+                  ✨ 프로젝트 구성원
+                  <p>{modalData.type}</p>
+                </h3>
+                <h3>
                   🔗 링크
                   <p>
                     <a href={modalData.link} target="_blank">
