@@ -20,13 +20,16 @@ const ProjectTab = styled.div`
     background: none;
     outline: none;
     border:none;
+    border-bottom: 1px solid rgba(255, 93, 106, 0);
     cursor: pointer;
     font-size: 2.4rem;
+    font-weight: bold;
     transition: all .2s ease-in-out;
     
     &:hover,
     &.on {
       color: #ff5d6a;
+      border-bottom: 1px solid #ff5d6a;
     }
   }
 `

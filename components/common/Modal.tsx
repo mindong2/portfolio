@@ -19,6 +19,10 @@ const Wrapper = styled(motion.div)`
     width: 90%;
   }
 
+  .sub-title {
+    color: #ff5d6a;
+  }
+
   svg {
     position: absolute;
     top: 0.4rem;
@@ -54,11 +58,11 @@ const Modal = ({ idx, setIsModal }: { idx: number; setIsModal: React.Dispatch<Re
               <ModalContent>
                 <h2>{modalData.title}</h2>
                 <h3>
-                  ✨ 프로젝트 구성원
+                  <span className="sub-title">✨ 프로젝트 구성원</span>
                   <p>{modalData.type}</p>
                 </h3>
                 <h3>
-                  🔗 링크
+                  <span className="sub-title">🔗 링크</span>
                   <p>
                     <a href={modalData.link} target="_blank">
                       {modalData.link}
@@ -67,7 +71,7 @@ const Modal = ({ idx, setIsModal }: { idx: number; setIsModal: React.Dispatch<Re
                 </h3>
                 {modalData.github !== "" ? (
                   <h3>
-                    <img className="github" src="/image/github-logo.svg" alt="" /> 깃허브 링크
+                    <img className="github" src="/image/github-logo.svg" alt="" /> <span className="sub-title">깃허브 링크</span>
                     <p>
                       <a href={modalData.github} target="_blank">
                         {modalData.github}
@@ -76,19 +80,19 @@ const Modal = ({ idx, setIsModal }: { idx: number; setIsModal: React.Dispatch<Re
                   </h3>
                 ) : null}
                 <h3>
-                  🌈 개발환경 <p>{modalData.skill}</p>
+                  <span className="sub-title">🌈 개발환경</span> <p>{modalData.skill}</p>
                 </h3>
                 <h3>
-                  💭 설명 <p>{modalData.desc}</p>
+                  <span className="sub-title">💭 설명</span> <p>{modalData.desc}</p>
                 </h3>
                 <h3>
-                  👩‍💻 업무 [{modalData.date}]
+                  <span className="sub-title">👩‍💻 업무</span> [{modalData.date}]
                   {modalData.work.map((v, idx) => (
                     <p key={idx}>- {v}</p>
                   ))}
                 </h3>
                 <h3>
-                  👏 성과 및 느낀점
+                  <span className="sub-title">👏 성과 및 느낀점</span>
                   <p>{modalData.mean}</p>
                 </h3>
               </ModalContent>
